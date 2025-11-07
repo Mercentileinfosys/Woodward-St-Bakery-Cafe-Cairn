@@ -97,17 +97,32 @@ const HeroSection = () => {
               </motion.a>
             </motion.div>
 
-            <motion.button
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(201, 164, 104, 0.3)', rotateY: 3 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary mt-8"
-              style={{ perspective: '1000px' }}
+              className="flex flex-col sm:flex-row gap-4 mt-8"
             >
-              Download Menu
-            </motion.button>
+              <motion.a
+                href="https://woodward-st-bakery-cafe.square.site/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(201, 164, 104, 0.3)', rotateY: 3 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary"
+                style={{ perspective: '1000px' }}
+              >
+                Order Online
+              </motion.a>
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(201, 164, 104, 0.3)', rotateY: 3 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-secondary"
+                style={{ perspective: '1000px' }}
+              >
+                Download Menu
+              </motion.button>
+            </motion.div>
           </motion.div>
 
           <motion.div
