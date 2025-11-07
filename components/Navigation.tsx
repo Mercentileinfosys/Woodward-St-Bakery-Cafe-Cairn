@@ -91,6 +91,18 @@ const Navigation = () => {
 
         <div className="hidden lg:flex items-center space-x-4">
           <motion.a
+            href="https://woodward-st-bakery-cafe.square.site/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary text-sm py-2 px-5"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.7 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            Order Online
+          </motion.a>
+          <motion.a
             href="tel:(07)40320931"
             className="text-secondary text-sm hover:text-accent transition-colors font-semibold"
             initial={{ opacity: 0, x: -20 }}
@@ -160,6 +172,19 @@ const Navigation = () => {
                 </motion.div>
               </Link>
             ))}
+            <motion.a
+              href="https://woodward-st-bakery-cafe.square.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-secondary hover:text-accent transition-colors py-3 text-base md:text-lg font-semibold mt-3"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: navLinks.length * 0.05 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              whileHover={{ x: 5 }}
+            >
+              🛒 Order Online
+            </motion.a>
             <div className="pt-3 border-t border-secondary/30 mt-3">
               <motion.a
                 href="tel:(07)40320931"
